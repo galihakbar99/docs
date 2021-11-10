@@ -1,110 +1,81 @@
----
-title: GitHub's products
-intro: 'An overview of {% data variables.product.prodname_dotcom %}''s products and pricing plans.'
-redirect_from:
-  - /articles/github-s-products
-  - /articles/githubs-products
-  - /github/getting-started-with-github/githubs-products
-  - /github/getting-started-with-github/learning-about-github/githubs-products
-versions:
-  fpt: '*'
-  ghes: '*'
-  ghae: '*'
-  ghec: '*'
-topics:
-  - Accounts
-  - CLI
-  - Mobile
-  - Desktop
-  - Security
----
-## About {% data variables.product.prodname_dotcom %}'s products
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"/>
 
-{% data variables.product.prodname_dotcom %} offers free and paid products. You can see pricing and a full list of features for each product at <{% data variables.product.pricing_url %}>. {% data reusables.products.product-roadmap %}
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:autoSizeMaxTextSize="30dp"
+        android:autoSizeMinTextSize="12dp"
+        android:autoSizeTextType="uniform"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Layout"/>
 
-## {% data variables.product.prodname_free_user %} for user accounts
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        app:cardBackgroundColor="@color/blue2"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingClass">
 
-With {% data variables.product.prodname_free_team %} for user accounts, you can work with unlimited collaborators on unlimited public repositories with a full feature set, and on unlimited private repositories with a limited feature set.
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gambar" />
 
-With {% data variables.product.prodname_free_user %}, your user account includes:
-- {% data variables.product.prodname_gcf %}
-- {% data variables.product.prodname_dependabot_alerts %}
-- Two-factor authentication enforcement
-- 2,000 {% data variables.product.prodname_actions %} minutes
-- 500MB {% data variables.product.prodname_registry %} storage
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginRight="10dp"
+            android:hint="NIM"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="250dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:hint="NAMA" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="305dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:hint="e-mail" />
 
-## {% data variables.product.prodname_pro %}
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="370dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/blue"
+            android:text="LOGIN" />
 
-In addition to the features available with {% data variables.product.prodname_free_user %} for user accounts, {% data variables.product.prodname_pro %} includes:
-- {% data variables.contact.github_support %} via email
-- 3,000 {% data variables.product.prodname_actions %} minutes
-- 2GB {% data variables.product.prodname_registry %} storage
-- Advanced tools and insights in private repositories:
-  - Required pull request reviewers
-  - Multiple pull request reviewers
-  - Auto-linked references
-  - {% data variables.product.prodname_pages %}
-  - Wikis
-  - Protected branches
-  - Code owners
-  - Repository insights graphs: Pulse, contributors, traffic, commits, code frequency, network, and forks
+    </androidx.cardview.widget.CardView>
 
-## {% data variables.product.prodname_free_team %} for organizations
-
-With {% data variables.product.prodname_free_team %} for organizations, you can work with unlimited collaborators on unlimited public repositories with a full feature set, or unlimited private repositories with a limited feature set.
-
-In addition to the features available with {% data variables.product.prodname_free_user %} for user accounts, {% data variables.product.prodname_free_team %} for organizations includes:
-- {% data variables.product.prodname_gcf %}
-- Team discussions
-- Team access controls for managing groups
-- 2,000 {% data variables.product.prodname_actions %} minutes
-- 500MB {% data variables.product.prodname_registry %} storage
-
-## {% data variables.product.prodname_team %}
-
-In addition to the features available with {% data variables.product.prodname_free_team %} for organizations, {% data variables.product.prodname_team %} includes:
-- {% data variables.contact.github_support %} via email
-- 3,000 {% data variables.product.prodname_actions %} minutes
-- 2GB {% data variables.product.prodname_registry %} storage
-- Advanced tools and insights in private repositories:
-  - Required pull request reviewers
-  - Multiple pull request reviewers
-  - {% data variables.product.prodname_pages %}
-  - Wikis
-  - Protected branches
-  - Code owners
-  - Repository insights graphs: Pulse, contributors, traffic, commits, code frequency, network, and forks
-  - Draft pull requests
-  - Team pull request reviewers
-  - Scheduled reminders
-{% ifversion fpt or ghec %}
-- The option to enable {% data variables.product.prodname_github_codespaces %}
-  - Organization owners can enable {% data variables.product.prodname_github_codespaces %} for the organization by setting a spending limit and granting user permissions for members of their organization. For more information, see "[Enabling Codespaces for your organization](/codespaces/managing-codespaces-for-your-organization/enabling-codespaces-for-your-organization)."
-{% endif %}
-
-{% data reusables.github-actions.actions-billing %}
-
-## {% data variables.product.prodname_enterprise %}
-
-{% data variables.product.prodname_enterprise %} includes two deployment options: cloud-hosted and self-hosted.
-
-In addition to the features available with {% data variables.product.prodname_team %}, {% data variables.product.prodname_enterprise %} includes:
-- {% data variables.contact.enterprise_support %}
-- Additional security, compliance, and deployment controls
-- Authentication with SAML single sign-on
-- Access provisioning with SAML or SCIM
-- {% data variables.product.prodname_github_connect %}
-- The option to purchase {% data variables.product.prodname_GH_advanced_security %}. For more information, see "[About {% data variables.product.prodname_GH_advanced_security %}](/github/getting-started-with-github/about-github-advanced-security)."
-
-{% data variables.product.prodname_ghe_cloud %} also includes:
-- {% data variables.contact.enterprise_support %}. For more information, see "<a href="/articles/github-enterprise-cloud-support" class="dotcom-only">{% data variables.product.prodname_ghe_cloud %} support</a>" and "<a href="/articles/github-enterprise-cloud-addendum" class="dotcom-only">{% data variables.product.prodname_ghe_cloud %} Addendum</a>."
-- 50,000 {% data variables.product.prodname_actions %} minutes
-- 50GB {% data variables.product.prodname_registry %} storage
-- Access control for {% data variables.product.prodname_pages %} sites. For more information, see <a href="/pages/getting-started-with-github-pages/changing-the-visibility-of-your-github-pages-site" class="dotcom-only">Changing the visibility of your {% data variables.product.prodname_pages %} site</a>"
-- A service level agreement for 99.9% monthly uptime
-- The option to configure your enterprise for {% data variables.product.prodname_emus %}, so you can provision and manage members with your identity provider and restrict your member's contributions to just your enterprise. For more information, see "[About {% data variables.product.prodname_emus %}](/enterprise-cloud@latest/admin/authentication/managing-your-enterprise-users-with-your-identity-provider/about-enterprise-managed-users)."
-- The option to centrally manage policy and billing for multiple {% data variables.product.prodname_dotcom_the_website %} organizations with an enterprise account. For more information, see "[About enterprise accounts](/enterprise-cloud@latest/admin/overview/about-enterprise-accounts)."
-
-You can set up a trial to evaluate {% data variables.product.prodname_ghe_cloud %}. For more information, see "<a href="/articles/setting-up-a-trial-of-github-enterprise-cloud" class="dotcom-only">Setting up a trial of {% data variables.product.prodname_ghe_cloud %}</a>."
-
-For more information about hosting your own instance of [{% data variables.product.prodname_ghe_server %}](https://enterprise.github.com), contact {% data variables.contact.contact_enterprise_sales %}. {% data reusables.enterprise_installation.request-a-trial %}
+</RelativeLayout>
